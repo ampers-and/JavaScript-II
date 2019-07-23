@@ -31,9 +31,7 @@ function getLength(arr, cb) {
 }
 
 // Function invocation 
-getLength(items, function(length) {
-  console.log(length);
-});
+getLength(items, console.log);
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
@@ -41,27 +39,21 @@ function last(arr, cb) {
 }
 
 // Function invocation 
-last(items, function(getlast) {
-  console.log(getlast);
-});
+last(items, console.log);
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
   return cb(x + y);
 }
 // Function invocation 
-sumNums(3,4, function(sum) {
-  console.log(sum);
-});
+sumNums(3,4, console.log);
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
   return cb(x * y)
 }
 //Function invocation
-multiplyNums(6,2, function(product){
-  console.log(product);
-})
+multiplyNums(6,2, console.log)
 
 function contains(item, list, cb) {
 // contains checks if an item is present inside of the given array/list.
@@ -70,12 +62,8 @@ return cb(list.includes(item))
 }
 
 //Function Invocation
-contains('Gum', items, function(incl){
-  console.log(incl);
-})
-contains('candy', items, function(incl){
-  console.log(incl);
-})
+contains('Gum', items, console.log);
+contains('candy', items, console.log);
 // /* STRETCH PROBLEM */
 
 // function removeDuplicates(array, cb) {
