@@ -27,29 +27,60 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  return cb(arr.length);
 }
+
+// Function invocation 
+getLength(items, function(length) {
+  console.log(length);
+});
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  return cb(arr[arr.length-1]);
 }
+
+// Function invocation 
+last(items, function(getlast) {
+  console.log(getlast);
+});
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  return cb(x + y);
 }
+// Function invocation 
+sumNums(3,4, function(sum) {
+  console.log(sum);
+});
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  return cb(x * y)
 }
+//Function invocation
+multiplyNums(6,2, function(product){
+  console.log(product);
+})
 
 function contains(item, list, cb) {
-  // contains checks if an item is present inside of the given array/list.
-  // Pass true to the callback if it is, otherwise pass false.
+// contains checks if an item is present inside of the given array/list.
+// Pass true to the callback if it is, otherwise pass false.
+return cb(list.includes(item))
 }
 
-/* STRETCH PROBLEM */
+//Function Invocation
+contains('Gum', items, function(incl){
+  console.log(incl);
+})
+contains('candy', items, function(incl){
+  console.log(incl);
+})
+// /* STRETCH PROBLEM */
 
-function removeDuplicates(array, cb) {
-  // removeDuplicates removes all duplicate values from the given array.
-  // Pass the duplicate free array to the callback function.
-  // Do not mutate the original array.
-}
+// function removeDuplicates(array, cb) {
+ 
+//   // removeDuplicates removes all duplicate values from the given array.
+//    // Pass the duplicate free array to the callback function.
+//    // Do not mutate the original array.
+//
